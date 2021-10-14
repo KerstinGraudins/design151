@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* CSS Document */
+* {/*universal reset*/
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/*mobile first*/
+body {
+  background: white;
+}
+section {}
+.container {}
+.row {
+  diplay: flex;
+  flex-direction: column;
+}
+/*responsive framework*/
+.full, .half, .third, .two_thirds, .quarter, .fifth, .sixth {
+  width: 100%;
+  min-height: 200px;
+  outline: thin red solid; /*delete this*/
+  display: flex; /*centers all text*/
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
+}
+
+/*typography*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "serif";
+}
+p {
+  font-family: Helvetica, Arial, "sans-serif"
+}
+
+/*navigation*/
+nav ul {
+  list-style-type: none;
+}
+nav li {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+}
+nav a {
+  text-decoration: none;
+  line-height: 40px;
+}
+
+/*header*/
+#header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #999;
+}
+#header h1 {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+/*hero image*/
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+       background-image:url("../img/hero.jpeg");
+      background-size:cover;
+}
+
+/*footer*/
+#footer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #333;
+}
+/*begin css for larger screens here*/
+@media screen and (min-width:740px) {
+  body {
+    background: azure;
+  }
+  section {}
+  #header {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    background: #999;
+    padding-top: 20px;
+  }
+  #header h1 {
+    width: 30%;
+  }
+  nav {
+    width: 70%;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+  }
+  nav li {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+  }
+  .container {
+    max-width: 1280px;
+    margin: auto;
+      background:white;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+  
+  .full {
+    width: 100%;
+  }
+  .half {
+    width: 50%;
+  }
+  .third {
+    width: 33.33%;
+  }
+  .two_thirds {
+    width: 66.66%;
+  }
+  .quarter {
+    width: 25%;
+  }
+  .fifth {
+    width: 20%;
+  }
+}
